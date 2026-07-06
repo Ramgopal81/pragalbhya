@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f8fbff"/>
+  <rect x="120" y="140" width="560" height="320" rx="24" fill="#ffffff" stroke="#4f84c4" stroke-width="8"/>
+  <circle cx="400" cy="300" r="110" fill="#2f6fb3"/>
+  <circle cx="400" cy="300" r="70" fill="#ffd84d"/>
+  <rect x="240" y="420" width="320" height="20" rx="10" fill="#4f84c4"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#1f4d7a">Sports</text>
+</svg>

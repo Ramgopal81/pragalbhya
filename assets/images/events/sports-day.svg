@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f1f9ff"/>
+  <rect x="80" y="140" width="640" height="320" rx="24" fill="#ffffff" stroke="#4f84c4" stroke-width="8"/>
+  <circle cx="260" cy="300" r="80" fill="#2f6fb3"/>
+  <circle cx="540" cy="300" r="80" fill="#ffd84d"/>
+  <rect x="160" y="440" width="480" height="20" rx="10" fill="#4f84c4"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#1f4d7a">Sports Day</text>
+</svg>

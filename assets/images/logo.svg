@@ -1,0 +1,7 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sumit Public School logo">
+  <rect width="120" height="120" rx="24" fill="#0d47a1"/>
+  <path d="M30 88V52l30-18 30 18v36" fill="none" stroke="#ffd54f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M44 88V64h32v24" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M54 46h12" stroke="#ffd54f" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="60" cy="34" r="7" fill="#ffd54f"/>
+</svg>

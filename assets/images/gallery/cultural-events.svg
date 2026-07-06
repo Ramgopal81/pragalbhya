@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#fffaf0"/>
+  <rect x="110" y="140" width="580" height="320" rx="24" fill="#ffffff" stroke="#e5b52d" stroke-width="8"/>
+  <circle cx="250" cy="260" r="70" fill="#2f6fb3"/>
+  <circle cx="550" cy="260" r="70" fill="#53a5ff"/>
+  <rect x="220" y="360" width="360" height="70" rx="16" fill="#ffd84d"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#1f4d7a">Cultural Events</text>
+</svg>

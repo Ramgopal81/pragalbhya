@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f4faff"/>
+  <rect x="120" y="130" width="560" height="340" rx="24" fill="#ffffff" stroke="#4f84c4" stroke-width="8"/>
+  <rect x="170" y="180" width="180" height="220" rx="16" fill="#2f6fb3"/>
+  <rect x="390" y="180" width="220" height="220" rx="16" fill="#e3f0ff" stroke="#4f84c4" stroke-width="6"/>
+  <path d="M430 220 H580" stroke="#2f6fb3" stroke-width="8" stroke-linecap="round"/>
+  <path d="M430 270 H560" stroke="#2f6fb3" stroke-width="8" stroke-linecap="round"/>
+  <path d="M430 320 H540" stroke="#2f6fb3" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="260" cy="290" r="40" fill="#ffd84d"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#1f4d7a">Library</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f8fcff"/>
+  <rect x="90" y="130" width="620" height="330" rx="24" fill="#ffffff" stroke="#4f84c4" stroke-width="8"/>
+  <rect x="160" y="190" width="180" height="180" rx="16" fill="#2f6fb3"/>
+  <rect x="380" y="190" width="220" height="180" rx="16" fill="#53a5ff"/>
+  <circle cx="250" cy="280" r="44" fill="#ffd84d"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#1f4d7a">Science Exhibition</text>
+</svg>
