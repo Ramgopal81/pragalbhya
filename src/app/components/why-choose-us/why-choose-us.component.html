@@ -1,0 +1,34 @@
+<section class="why-us-section py-5 py-lg-6">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-badge">Why Choose Us</span>
+      <h2>Why Parents Trust New Pragalbhya Public School</h2>
+      <p class="section-description">
+        We combine academic excellence, modern learning tools, and holistic development to create an environment where children truly thrive.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let item of features">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <i [class]="item.icon"></i>
+          </div>
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.desc }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-row mt-5">
+      <div class="row g-4">
+        <div class="col-6 col-lg-3" *ngFor="let stat of stats">
+          <div class="stat-card reveal">
+            <h3>{{ stat.value }}</h3>
+            <p>{{ stat.label }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

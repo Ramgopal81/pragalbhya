@@ -1,0 +1,123 @@
+.why-us-section {
+  background: linear-gradient(180deg, #f9fcff 0%, #f4f9ff 100%);
+  position: relative;
+}
+
+.section-badge {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(13, 71, 161, 0.08);
+  color: #0d47a1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.why-us-section h2 {
+  color: #0d47a1;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+
+.section-description {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #5a6b7a;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 1.35rem;
+  padding: 1.6rem;
+  box-shadow: 0 16px 35px rgba(13, 71, 161, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid transparent;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0d47a1, #f6b93b);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 22px 45px rgba(13, 71, 161, 0.14);
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0d47a1 0%, #1e88e5 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h4 {
+  color: #0d47a1;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.feature-card p {
+  color: #6b7b8d;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f2f8ff 100%);
+  border-radius: 1.2rem;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  box-shadow: 0 14px 30px rgba(13, 71, 161, 0.08);
+}
+
+.stat-card h3 {
+  color: #0d47a1;
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.stat-card p {
+  color: #6b7b8d;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.reveal {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .feature-card {
+    padding: 1.3rem;
+  }
+}

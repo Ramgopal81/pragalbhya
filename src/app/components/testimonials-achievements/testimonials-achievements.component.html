@@ -1,0 +1,82 @@
+<section class="testimonials-achievements-section py-5 py-lg-6">
+  <div class="container">
+    <div class="section-head text-center mb-4 mb-lg-5 reveal" #revealItem>
+      <span class="eyebrow">School Community</span>
+      <h2>What Parents & Students Say</h2>
+      <p>Trusted by thousands of happy parents and successful students.</p>
+    </div>
+
+    <div class="testimonial-shell reveal" #revealItem>
+      <div class="testimonial-carousel">
+        <button class="carousel-control prev" type="button" (click)="prevTestimonial()" aria-label="Previous testimonial">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <i class="fa-solid fa-quote-right"></i>
+          </div>
+          <div class="testimonial-user">
+            <img [src]="testimonials[activeTestimonial].avatar" [alt]="testimonials[activeTestimonial].name" />
+            <div>
+              <h4>{{ testimonials[activeTestimonial].name }}</h4>
+              <p>{{ testimonials[activeTestimonial].role }}</p>
+            </div>
+          </div>
+
+          <div class="rating">
+            <i class="fa-solid fa-star" *ngFor="let _ of [0,1,2,3,4]"></i>
+          </div>
+
+          <p class="testimonial-text">“{{ testimonials[activeTestimonial].quote }}”</p>
+        </div>
+
+        <button class="carousel-control next" type="button" (click)="nextTestimonial()" aria-label="Next testimonial">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="testimonial-dots">
+        <button
+          type="button"
+          *ngFor="let testimonial of testimonials; let i = index"
+          [class.active]="i === activeTestimonial"
+          (click)="setActiveTestimonial(i)"
+          [attr.aria-label]="'Show testimonial ' + (i + 1)"
+        ></button>
+      </div>
+    </div>
+
+    <div class="achievements-section mt-5">
+      <div class="section-head text-center mb-4 reveal" #revealItem>
+        <span class="eyebrow">Our Milestones</span>
+        <h2>Our Achievements</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-xl-3" *ngFor="let achievement of achievements">
+          <article class="achievement-card reveal" #revealItem>
+            <div class="achievement-icon">
+              <i [class]="achievement.icon"></i>
+            </div>
+            <h4>{{ achievement.title }}</h4>
+            <div class="achievement-value">{{ achievement.value }}</div>
+            <p>{{ achievement.description }}</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="success-banner reveal" #revealItem>
+      <div>
+        <span class="eyebrow eyebrow-light">Admissions 2026-27</span>
+        <h3>Join the Family of Future Leaders</h3>
+        <p>Admissions are now open for the academic session 2026–27.</p>
+      </div>
+      <div class="cta-actions">
+        <a routerLink="/admissions" class="btn btn-cta btn-cta-primary">Apply Now</a>
+        <a routerLink="/contact" class="btn btn-cta btn-cta-secondary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>

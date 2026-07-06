@@ -1,0 +1,68 @@
+<section class="hero-section">
+  <div class="hero-slider" *ngFor="let slide of slides; let i = index">
+    <div
+      class="hero-slide"
+      [ngStyle]="{ 'background-image': 'url(' + slide.image + ')' }"
+      [class.active]="i === activeIndex"
+      aria-hidden="true"
+    ></div>
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content position-relative">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div class="hero-copy">
+          <span class="eyebrow">Future-Ready Learning Community</span>
+          <h1>{{ slides[activeIndex].title }}</h1>
+          <h2>{{ slides[activeIndex].subtitle }}</h2>
+          <p>{{ slides[activeIndex].description }}</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg me-3" routerLink="/admissions">Apply Now</a>
+            <a class="btn btn-outline-light btn-lg" routerLink="/contact">Book a Campus Visit</a>
+          </div>
+
+          <div class="hero-highlights d-flex flex-wrap gap-3 mt-4">
+            <span><i class="fa-solid fa-graduation-cap me-2"></i>CBSE Curriculum</span>
+            <span><i class="fa-solid fa-shield-heart me-2"></i>Safe Campus</span>
+            <span><i class="fa-solid fa-star me-2"></i>Holistic Growth</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="hero-card">
+          <div class="hero-card-icon">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <h3>Why Parents Choose Us</h3>
+          <ul>
+            <li>Experienced educators and mentors</li>
+            <li>Innovation-led classrooms and labs</li>
+            <li>Focus on sports, arts, and leadership</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="slider-control prev" type="button" (click)="prevSlide()" aria-label="Previous slide">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <button class="slider-control next" type="button" (click)="nextSlide()" aria-label="Next slide">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+
+  <div class="slider-dots">
+    <button
+      *ngFor="let slide of slides; let i = index"
+      class="dot"
+      [class.active]="i === activeIndex"
+      type="button"
+      (click)="goToSlide(i)"
+      [attr.aria-label]="'Go to slide ' + (i + 1)"
+    ></button>
+  </div>
+</section>

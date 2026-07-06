@@ -1,0 +1,160 @@
+<section class="admissions-page py-5 py-lg-6">
+  <div class="container">
+    <div class="section-head text-center mb-4 mb-lg-5">
+      <span class="eyebrow">Admissions 2026–27</span>
+      <h1>Admissions Open 2026–27</h1>
+      <p>Begin your child’s journey with Pragalbh Public School.</p>
+    </div>
+
+    <div class="timeline-wrapper mb-5">
+      <div class="timeline-row">
+        <div class="timeline-card" *ngFor="let step of admissionSteps">
+          <div class="timeline-icon">
+            <i [class]="step.icon"></i>
+          </div>
+          <span class="step-number">{{ step.step }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-start">
+      <div class="col-12 col-lg-7">
+        <div class="form-card">
+          <div class="form-header mb-4">
+            <span class="eyebrow">Application Form</span>
+            <h2>Online Admission Form</h2>
+            <p>Complete the form below to begin the admission process.</p>
+          </div>
+
+          <form [formGroup]="admissionForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="studentName">Student Name</label>
+                <input id="studentName" class="form-control" formControlName="studentName" [ngClass]="{ 'is-invalid': admissionForm.get('studentName')?.touched && admissionForm.get('studentName')?.invalid }" />
+                <div class="invalid-feedback">Please enter a valid student name.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="fatherName">Father's Name</label>
+                <input id="fatherName" class="form-control" formControlName="fatherName" [ngClass]="{ 'is-invalid': admissionForm.get('fatherName')?.touched && admissionForm.get('fatherName')?.invalid }" />
+                <div class="invalid-feedback">Please enter the father's name.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="motherName">Mother's Name</label>
+                <input id="motherName" class="form-control" formControlName="motherName" [ngClass]="{ 'is-invalid': admissionForm.get('motherName')?.touched && admissionForm.get('motherName')?.invalid }" />
+                <div class="invalid-feedback">Please enter the mother's name.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="dob">Date of Birth</label>
+                <input id="dob" type="date" class="form-control" formControlName="dob" [ngClass]="{ 'is-invalid': admissionForm.get('dob')?.touched && admissionForm.get('dob')?.invalid }" />
+                <div class="invalid-feedback">Please select the date of birth.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="gender">Gender</label>
+                <select id="gender" class="form-select" formControlName="gender" [ngClass]="{ 'is-invalid': admissionForm.get('gender')?.touched && admissionForm.get('gender')?.invalid }">
+                  <option value="">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div class="invalid-feedback">Please select a gender.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="classApplying">Class Applying For</label>
+                <input id="classApplying" class="form-control" formControlName="classApplying" [ngClass]="{ 'is-invalid': admissionForm.get('classApplying')?.touched && admissionForm.get('classApplying')?.invalid }" />
+                <div class="invalid-feedback">Please enter the class.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="previousSchool">Previous School</label>
+                <input id="previousSchool" class="form-control" formControlName="previousSchool" [ngClass]="{ 'is-invalid': admissionForm.get('previousSchool')?.touched && admissionForm.get('previousSchool')?.invalid }" />
+                <div class="invalid-feedback">Please enter previous school details.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="mobile">Mobile Number</label>
+                <input id="mobile" class="form-control" formControlName="mobile" [ngClass]="{ 'is-invalid': admissionForm.get('mobile')?.touched && admissionForm.get('mobile')?.invalid }" />
+                <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="email">Email Address</label>
+                <input id="email" type="email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': admissionForm.get('email')?.touched && admissionForm.get('email')?.invalid }" />
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="address">Residential Address</label>
+                <textarea id="address" rows="3" class="form-control" formControlName="address" [ngClass]="{ 'is-invalid': admissionForm.get('address')?.touched && admissionForm.get('address')?.invalid }"></textarea>
+                <div class="invalid-feedback">Please enter your address.</div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <label class="form-label" for="city">City</label>
+                <input id="city" class="form-control" formControlName="city" [ngClass]="{ 'is-invalid': admissionForm.get('city')?.touched && admissionForm.get('city')?.invalid }" />
+                <div class="invalid-feedback">Please enter your city.</div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <label class="form-label" for="state">State</label>
+                <input id="state" class="form-control" formControlName="state" [ngClass]="{ 'is-invalid': admissionForm.get('state')?.touched && admissionForm.get('state')?.invalid }" />
+                <div class="invalid-feedback">Please enter your state.</div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <label class="form-label" for="pincode">Pincode</label>
+                <input id="pincode" class="form-control" formControlName="pincode" [ngClass]="{ 'is-invalid': admissionForm.get('pincode')?.touched && admissionForm.get('pincode')?.invalid }" />
+                <div class="invalid-feedback">Please enter a valid 6-digit pincode.</div>
+              </div>
+            </div>
+
+            <div class="upload-section mt-4">
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label">Student Photograph</label>
+                  <input class="form-control" type="file" />
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label">Birth Certificate</label>
+                  <input class="form-control" type="file" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-check mt-4">
+              <input class="form-check-input" type="checkbox" id="terms" formControlName="terms" />
+              <label class="form-check-label" for="terms">I agree to the Terms & Conditions.</label>
+              <div class="invalid-feedback d-block" *ngIf="admissionForm.get('terms')?.touched && admissionForm.get('terms')?.invalid">Please accept the terms and conditions.</div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <button type="submit" class="btn btn-submit">Apply Now</button>
+              <button type="button" class="btn btn-reset" (click)="resetForm()">Reset Form</button>
+            </div>
+
+            <div class="alert alert-success mt-4" *ngIf="submitted">
+              Your admission application has been submitted successfully. Our team will contact you shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="help-stack">
+          <div class="help-card" *ngFor="let item of helpCards">
+            <div class="help-icon"><i [class]="item.icon"></i></div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+            <span>{{ item.linkText }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,90 @@
+<section class="contact-page py-5 py-lg-6">
+  <div class="container">
+    <div class="section-head text-center mb-4 mb-lg-5">
+      <span class="eyebrow">Contact Us</span>
+      <h1>Get In Touch</h1>
+      <p>We are here to answer your questions and help you with admissions.</p>
+    </div>
+
+    <div class="row g-4 mb-4 mb-lg-5">
+      <div class="col-12 col-md-6 col-xl-3" *ngFor="let card of contactCards">
+        <article class="info-card">
+          <div class="info-icon"><i [class]="card.icon"></i></div>
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.description }}</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-start">
+      <div class="col-12 col-lg-7">
+        <div class="form-card">
+          <div class="form-header mb-4">
+            <span class="eyebrow">Message Us</span>
+            <h2>Send Us a Message</h2>
+            <p>We’ll get back to you as soon as possible.</p>
+          </div>
+
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="fullName">Full Name</label>
+                <input id="fullName" class="form-control" formControlName="fullName" [ngClass]="{ 'is-invalid': contactForm.get('fullName')?.touched && contactForm.get('fullName')?.invalid }" />
+                <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="email">Email</label>
+                <input id="email" type="email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': contactForm.get('email')?.touched && contactForm.get('email')?.invalid }" />
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="mobile">Mobile Number</label>
+                <input id="mobile" class="form-control" formControlName="mobile" [ngClass]="{ 'is-invalid': contactForm.get('mobile')?.touched && contactForm.get('mobile')?.invalid }" />
+                <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="subject">Subject</label>
+                <input id="subject" class="form-control" formControlName="subject" [ngClass]="{ 'is-invalid': contactForm.get('subject')?.touched && contactForm.get('subject')?.invalid }" />
+                <div class="invalid-feedback">Please enter a subject.</div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" rows="5" class="form-control" formControlName="message" [ngClass]="{ 'is-invalid': contactForm.get('message')?.touched && contactForm.get('message')?.invalid }"></textarea>
+                <div class="invalid-feedback">Please enter a message with at least 10 characters.</div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <button type="submit" class="btn btn-submit">Send Message</button>
+              <button type="button" class="btn btn-reset" (click)="resetForm()">Reset</button>
+            </div>
+
+            <div class="alert alert-success mt-4" *ngIf="submitted">
+              Your message has been sent successfully. We will contact you shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="social-card">
+          <h3>Follow Us</h3>
+          <p>Stay connected with our latest updates and events.</p>
+          <div class="social-icons">
+            <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="social.name" class="social-icon">
+              <i [class]="social.icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-card mt-4">
+      <iframe title="School Location" src="https://www.google.com/maps?q=Pragalbh%20Public%20School%20Near%20Lucknow%20Highway%20Shaheed%20Ashfaqulla%20Khan%20Dwar%20Rawanyia%20Poorab%20Kudwar%20Road%20Aliganj%2CSultanpur%20227805%2C%20Uttar%20Pradesh%2C%20India&output=embed" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>

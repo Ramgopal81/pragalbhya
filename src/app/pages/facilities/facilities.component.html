@@ -1,0 +1,41 @@
+<section class="facilities-section py-5 py-lg-6">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-badge">Our World-Class Facilities</span>
+      <h2>Providing modern infrastructure for holistic student development.</h2>
+      <p class="section-description">
+        Every facility is carefully designed to support academic excellence, wellness, creativity, and safe learning experiences.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let facility of facilities">
+        <article class="facility-card reveal">
+          <div class="facility-image">
+            <img [src]="facility.image" [alt]="facility.title" />
+            <div class="image-overlay"></div>
+          </div>
+          <div class="facility-body">
+            <div class="facility-icon">
+              <i [class]="facility.icon"></i>
+            </div>
+            <h4>{{ facility.title }}</h4>
+            <p>{{ facility.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="banner-box mt-5 reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <h3>Modern Infrastructure for Better Learning Environment</h3>
+          <p>We combine thoughtful design, safety, and technology to create a campus that inspires learning every day.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-light" routerLink="/contact">Explore Campus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

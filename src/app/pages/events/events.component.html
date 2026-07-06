@@ -1,0 +1,51 @@
+<section class="events-page py-5 py-lg-6">
+  <div class="container">
+    <div class="section-head text-center mb-4 mb-lg-5">
+      <span class="eyebrow">School Highlights</span>
+      <h1>Upcoming Events</h1>
+      <p>Engaging experiences that inspire learning, connection and student growth.</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-12 col-md-6 col-xl-3" *ngFor="let event of upcomingEvents">
+        <article class="card-elevated h-100">
+          <div class="image-wrap">
+            <img [src]="event.image" [alt]="event.title" />
+            <span class="date-badge">{{ event.date }}</span>
+          </div>
+          <div class="card-body">
+            <h3>{{ event.title }}</h3>
+            <p>{{ event.description }}</p>
+            <ul class="details-list">
+              <li><i class="fa-solid fa-location-dot"></i> {{ event.location }}</li>
+              <li><i class="fa-solid fa-clock"></i> {{ event.time }}</li>
+            </ul>
+            <a routerLink="/events" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="section-head text-center mb-4 mb-lg-5">
+      <span class="eyebrow">Latest Updates</span>
+      <h2>Latest News</h2>
+      <p>Fresh announcements and success stories from our school community.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-xl-3" *ngFor="let news of latestNews">
+        <article class="card-elevated h-100 news-card">
+          <div class="image-wrap">
+            <img [src]="news.image" [alt]="news.title" />
+            <span class="news-date">{{ news.date }}</span>
+          </div>
+          <div class="card-body">
+            <h3>{{ news.title }}</h3>
+            <p>{{ news.description }}</p>
+            <a routerLink="/news" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

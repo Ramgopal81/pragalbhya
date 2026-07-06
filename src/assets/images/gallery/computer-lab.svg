@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#eef7ff"/>
+  <rect x="110" y="130" width="580" height="330" rx="24" fill="#ffffff" stroke="#5ba0e6" stroke-width="8"/>
+  <rect x="160" y="180" width="200" height="120" rx="16" fill="#1f4d7a"/>
+  <rect x="400" y="180" width="200" height="120" rx="16" fill="#2f6fb3"/>
+  <rect x="200" y="340" width="400" height="70" rx="16" fill="#ffd84d"/>
+  <rect x="180" y="420" width="440" height="20" rx="10" fill="#4f84c4"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#1f4d7a">Computer Lab</text>
+</svg>

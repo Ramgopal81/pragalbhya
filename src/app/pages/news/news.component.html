@@ -1,0 +1,28 @@
+<section class="py-5 py-lg-6 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-badge">Latest News</span>
+      <h1 class="display-5 fw-bold mb-3">Updates from the school community</h1>
+      <p class="text-muted mx-auto" style="max-width: 700px;">
+        Discover the latest achievements, admissions news, and campus developments shaping our learning environment.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6" *ngFor="let item of newsItems">
+        <article class="card border-0 shadow-sm h-100 overflow-hidden">
+          <img [src]="item.image" [alt]="item.title" class="card-img-top" style="height: 220px; object-fit: cover;" />
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge text-bg-primary">{{ item.category }}</span>
+              <span class="text-muted small">{{ item.date }}</span>
+            </div>
+            <h3 class="h5 fw-semibold mb-3">{{ item.title }}</h3>
+            <p class="text-muted mb-4">{{ item.description }}</p>
+            <a routerLink="/contact" class="btn btn-outline-primary">Contact Us</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

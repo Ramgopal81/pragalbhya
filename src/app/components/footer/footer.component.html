@@ -1,0 +1,75 @@
+<footer class="premium-footer">
+  <div class="container">
+    <div class="footer-top row g-4">
+      <div class="col-12 col-lg-3">
+        <div class="footer-brand">
+          <div class="brand-mark">P</div>
+          <div>
+            <h4>New Pragalbhya Public School</h4>
+            <p>Shaping bright futures through excellence in learning, character and innovation.</p>
+          </div>
+        </div>
+        <p class="mission-text">Our mission is to create a nurturing, future-ready environment where every student can grow with confidence.</p>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h5>Quick Links</h5>
+        <ul class="footer-list">
+          <li *ngFor="let link of quickLinks">
+            <a [routerLink]="link.route">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-lg-2">
+        <h5>Admissions</h5>
+        <ul class="footer-list">
+          <li *ngFor="let link of admissionsLinks">
+            <a [routerLink]="link.route">{{ link.label }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-lg-2">
+        <h5>Contact</h5>
+        <ul class="footer-list contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> New Pragalbhya Public School Near Lucknow Highway Shaheed Ashfaqulla Khan Dwar Rawanyia Poorab Kudwar Road Aliganj,Sultanpur 227805, Uttar Pradesh, India</li>
+          <li><i class="fa-solid fa-phone"></i> +91 9415181626</li>
+          <li><i class="fa-solid fa-envelope"></i> info&#64;pragalbhpublicschool.com</li>
+          <li><i class="fa-solid fa-clock"></i> Mon - Fri: 8:00 AM - 3:00 PM</li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-lg-3">
+        <h5>Newsletter</h5>
+        <p>Subscribe to receive updates on admissions, events and achievements.</p>
+        <div class="newsletter-form">
+          <input type="email" class="form-control" placeholder="Your email address" />
+          <button type="button" class="btn btn-subscribe">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-social mt-4">
+      <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="social.name" class="social-icon">
+        <i [class]="social.icon"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">© 2026 Sumit Public School. All Rights Reserved.</p>
+      <div class="footer-bottom-links d-flex flex-wrap gap-3">
+        <a routerLink="/privacy">Privacy Policy</a>
+        <a routerLink="/terms">Terms & Conditions</a>
+        <a routerLink="/disclaimer">Disclaimer</a>
+        <a routerLink="/sitemap">Sitemap</a>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="scroll-top" *ngIf="showScrollTop" (click)="scrollToTop()" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+</footer>

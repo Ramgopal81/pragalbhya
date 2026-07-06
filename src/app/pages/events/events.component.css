@@ -1,0 +1,149 @@
+:host {
+  display: block;
+}
+
+.events-page {
+  background: linear-gradient(135deg, #f8fbff 0%, #f4faff 100%);
+}
+
+.py-lg-6 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section-head {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(82, 160, 255, 0.14);
+  color: #1f4d7a;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-bottom: 0.9rem;
+}
+
+.section-head h1,
+.section-head h2 {
+  font-size: clamp(1.9rem, 2.7vw, 2.7rem);
+  font-weight: 800;
+  color: #102945;
+  margin-bottom: 0.6rem;
+}
+
+.section-head p {
+  color: #5a6f86;
+  margin-bottom: 0;
+}
+
+.card-elevated {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(31, 77, 122, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(16, 41, 69, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-elevated:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px rgba(16, 41, 69, 0.16);
+}
+
+.image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.card-elevated:hover .image-wrap img {
+  transform: scale(1.05);
+}
+
+.date-badge,
+.news-date {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 216, 77, 0.96);
+  color: #102945;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.card-body {
+  padding: 1.2rem 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.card-body h3 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #112945;
+  margin: 0;
+}
+
+.card-body p {
+  margin: 0;
+  line-height: 1.65;
+  color: #5a6f86;
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: #33506f;
+  font-size: 0.95rem;
+}
+
+.details-list i {
+  color: #2f6fb3;
+  margin-right: 0.4rem;
+}
+
+.btn-outline-primary {
+  width: fit-content;
+  border-radius: 999px;
+  border: 1px solid #2f6fb3;
+  color: #2f6fb3;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background: linear-gradient(135deg, #1f4d7a 0%, #53a5ff 100%);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+@media (max-width: 576px) {
+  .py-lg-6 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}

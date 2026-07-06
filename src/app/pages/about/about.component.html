@@ -1,0 +1,61 @@
+<section class="about-section py-5 py-lg-6">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="image-wrapper reveal">
+          <img src="assets/images/about-school.jpg" alt="Pragalbh Public School campus and learning environment" />
+          <div class="experience-badge">
+            <i class="fa-solid fa-award"></i>
+            <span>10+ Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="content-box reveal">
+          <span class="section-badge">About Our School</span>
+          <h1>Building Future Leaders Through Quality Education</h1>
+          <p>
+            Pragalbh Public School is committed to shaping young minds with a perfect blend of academic rigor,
+            innovation, and value-based education. We believe every child deserves a nurturing environment that inspires curiosity.
+          </p>
+          <p>
+            Our vision is to create responsible, confident, and compassionate learners who are prepared to lead with integrity
+            in a global society. Our mission is to empower students through meaningful learning experiences and strong character building.
+          </p>
+          <p>
+            Academic excellence is at the heart of our approach, supported by experienced teachers, modern resources,
+            and a curriculum designed to develop critical thinking, creativity, and problem-solving skills.
+          </p>
+          <p>
+            We focus equally on student development through co-curricular activities, sports, leadership opportunities,
+            and wellness initiatives that promote holistic growth.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature-item" *ngFor="let feature of features">
+              <i [class]="feature.icon"></i>
+              <span>{{ feature.label }}</span>
+            </div>
+          </div>
+
+          <div class="action-buttons mt-4">
+            <a class="btn btn-primary" routerLink="/academics">Explore More</a>
+            <a class="btn btn-outline-primary" href="assets/images/about-school.jpg" download>Download Brochure</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlights mt-5">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" *ngFor="let highlight of highlights">
+          <div class="highlight-card reveal">
+            <h4>{{ highlight.title }}</h4>
+            <p>{{ highlight.text }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

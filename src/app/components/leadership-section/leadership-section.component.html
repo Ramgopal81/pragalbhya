@@ -1,0 +1,44 @@
+<section class="leadership-section" aria-labelledby="leadership-title">
+  <div class="container">
+    <div class="section-heading text-center mb-5 reveal-item" #revealItem data-aos="fade-up">
+      <span class="eyebrow">Leadership</span>
+      <h2 id="leadership-title">{{ sectionTitle }}</h2>
+      <p>{{ subtitle }}</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div
+        class="col-12 col-lg-6 reveal-item"
+        #revealItem
+        *ngFor="let profile of profiles; let i = index"
+        data-aos="fade-up"
+        [attr.data-aos-delay]="i * 150"
+      >
+        <article class="leadership-card h-100">
+          <div class="card-glow" [ngClass]="profile.accentClass"></div>
+          <div class="card-content">
+            <div class="profile-shell">
+              <img [src]="profile.photo" [alt]="profile.name" class="profile-photo" />
+            </div>
+
+            <div class="profile-info">
+              <h3>{{ profile.name }}</h3>
+              <p class="designation">{{ profile.designation }}</p>
+              <p class="message">{{ profile.message }}</p>
+            </div>
+
+            <div class="signature-block">
+              <div class="signature-placeholder">
+                <span class="signature-icon">✍</span>
+                <span>{{ profile.signatureLabel }}</span>
+              </div>
+              <!-- <button type="button" class="btn leadership-btn">
+                {{ profile.buttonLabel }}
+              </button> -->
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

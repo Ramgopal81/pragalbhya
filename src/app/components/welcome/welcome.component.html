@@ -1,0 +1,50 @@
+<section class="welcome-section py-5 py-lg-6">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="welcome-image-card">
+          <img src="assets/images/about-school.jpg" alt="Students and faculty at Pragalbh Public School" />
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="welcome-copy">
+          <span class="section-tag">Welcome to New Pragalbhya Public School</span>
+          <h2>Inspiring Excellence Through Education</h2>
+          <p>
+            New Pragalbhya Public School is a forward-looking institution where academics, character, and innovation come together.
+            We create a vibrant environment where young learners are encouraged to question, create, and grow with confidence.
+          </p>
+          <p>
+            Our mission is to nurture responsible, compassionate, and future-ready individuals through inspiring teaching,
+            modern infrastructure, and a culture of excellence that values every child equally.
+          </p>
+          <p>
+            With experienced educators, a balanced curriculum, and a safe nurturing campus, we prepare students to thrive in
+            an ever-changing world with purpose and integrity.
+          </p>
+
+          <div class="principal-box">
+            <div>
+              <h4>Kiran Upadhyay</h4>
+              <p>Principal & Academic Director</p>
+            </div>
+            <a class="btn btn-primary" routerLink="/about">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-3">
+      <div class="col-md-6 col-lg-3" *ngFor="let feature of features">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i [class]="feature.icon"></i>
+          </div>
+          <h5>{{ feature.title }}</h5>
+          <p>{{ feature.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

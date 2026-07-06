@@ -1,0 +1,44 @@
+<section class="academics-section py-5 py-lg-6">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-badge">Our Academic Programs</span>
+      <h2>Providing quality education at every stage of learning.</h2>
+      <p class="section-description">
+        Each program is thoughtfully designed to encourage curiosity, confidence, and academic excellence from early years to senior school.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let program of programs">
+        <article class="program-card reveal">
+          <img [src]="program.image" [alt]="program.title" />
+          <div class="program-body">
+            <div class="program-icon">
+              <i [class]="program.icon"></i>
+            </div>
+            <h4>{{ program.title }}</h4>
+            <p class="program-age">{{ program.age }}</p>
+            <p>{{ program.description }}</p>
+            <a class="btn btn-primary" routerLink="/admissions">Learn More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="cta-box mt-5 reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <span class="section-badge">Admissions Open</span>
+          <h3>Admissions Open for 2026–27</h3>
+          <p>
+            Give your child the opportunity to learn in a modern and nurturing environment that supports both academic growth and personal confidence.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-warning me-2 mb-2" routerLink="/admissions">Apply Online</a>
+          <a class="btn btn-outline-primary mb-2" href="assets/images/about-school.jpg" download>Download Prospectus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

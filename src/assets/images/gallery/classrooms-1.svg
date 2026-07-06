@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f5f9ff"/>
+  <rect x="120" y="110" width="560" height="360" rx="24" fill="#ffffff" stroke="#5ba0e6" stroke-width="8"/>
+  <rect x="170" y="170" width="150" height="110" rx="14" fill="#2f6fb3"/>
+  <rect x="340" y="170" width="150" height="110" rx="14" fill="#4da3ff"/>
+  <rect x="510" y="170" width="120" height="110" rx="14" fill="#ffd84d"/>
+  <rect x="180" y="330" width="450" height="80" rx="14" fill="#dceeff"/>
+  <path d="M210 330 V450" stroke="#2f6fb3" stroke-width="10"/>
+  <path d="M590 330 V450" stroke="#2f6fb3" stroke-width="10"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#1f4d7a">Bright Classrooms</text>
+</svg>

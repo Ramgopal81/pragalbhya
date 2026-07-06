@@ -1,0 +1,130 @@
+<section class="gallery-section py-5 py-lg-6">
+  <div class="container">
+    <div class="section-head text-center">
+      <span class="eyebrow">School Gallery</span>
+      <h2>School Gallery</h2>
+      <p>Capturing Moments of Learning, Growth and Success.</p>
+    </div>
+
+    <!-- Featured Carousel Slider -->
+    <div class="featured-slider mb-5">
+      <div class="slider-container">
+        <div class="slider-wrapper">
+          <div
+            class="slider-item"
+            *ngFor="let item of sliderItems; let i = index"
+            [class.active]="i === currentSlideIndex"
+          >
+            <img [src]="item.image" [alt]="item.title" />
+            <div class="slider-overlay">
+              <span class="gallery-badge">{{ item.badge }}</span>
+              <h3>{{ item.title }}</h3>
+              <p>Click to explore</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-nav slider-prev" (click)="prevSlide()" aria-label="Previous slide">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="slider-nav slider-next" (click)="nextSlide()" aria-label="Next slide">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="slider-dots">
+        <button
+          class="dot"
+          *ngFor="let item of sliderItems; let i = index"
+          [class.active]="i === currentSlideIndex"
+          (click)="goToSlide(i)"
+          [attr.aria-label]="'Go to slide ' + (i + 1)"
+        ></button>
+      </div>
+    </div>
+
+    <div class="filter-row d-flex flex-wrap justify-content-center gap-2 mb-4">
+      <button
+        type="button"
+        class="filter-btn btn"
+        *ngFor="let filter of filterOptions"
+        [class.active]="activeCategory === filter.value"
+        (click)="setCategory(filter.value)"
+      >
+        {{ filter.label }}
+      </button>
+    </div>
+
+    <div class="gallery-grid">
+      <article
+        class="gallery-card"
+        *ngFor="let item of filteredItems"
+        [class.gallery-card--wide]="item.layout === 'wide'"
+        [class.gallery-card--tall]="item.layout === 'tall'"
+        (click)="openLightbox(item)"
+      >
+        <img [src]="item.image" [alt]="item.title" />
+        <div class="gallery-overlay">
+          <span class="gallery-badge">{{ item.badge }}</span>
+          <div class="gallery-meta">
+            <h3>{{ item.title }}</h3>
+          </div>
+        </div>
+        <div class="gallery-icon" aria-hidden="true">
+          <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </div>
+      </article>
+    </div>
+
+    <!-- Gallery Pagination -->
+    <div class="gallery-pagination" *ngIf="totalPages > 1">
+      <button
+        class="pagination-nav prev"
+        (click)="prevGridPage()"
+        [disabled]="gridPage === 0"
+        aria-label="Previous page"
+      >
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="pagination-dots">
+        <button
+          class="pagination-dot"
+          *ngFor="let page of [].constructor(totalPages); let i = index"
+          [class.active]="i === gridPage"
+          (click)="goToGridPage(i)"
+          [attr.aria-label]="'Go to page ' + (i + 1)"
+        ></button>
+      </div>
+
+      <button
+        class="pagination-nav next"
+        (click)="nextGridPage()"
+        [disabled]="gridPage === totalPages - 1"
+        aria-label="Next page"
+      >
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="text-center mt-4">
+      <a routerLink="/gallery" class="btn btn-view">View Complete Gallery</a>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox-backdrop" *ngIf="selectedItem" (click)="closeLightbox()">
+  <div class="lightbox-content" (click)="$event.stopPropagation()">
+    <button class="lightbox-close" type="button" (click)="closeLightbox()" aria-label="Close gallery preview">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img [src]="selectedItem.image" [alt]="selectedItem.title" />
+    <div class="lightbox-caption">
+      <div>
+        <span class="gallery-badge">{{ selectedItem.badge }}</span>
+        <h3>{{ selectedItem.title }}</h3>
+      </div>
+      <p class="mb-0">A glimpse into the vibrant learning environment at Sumit Public School.</p>
+    </div>
+  </div>
+</div>
