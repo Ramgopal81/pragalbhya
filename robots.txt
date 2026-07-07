@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pragalbhpublicschool.com/sitemap.xml
+Sitemap: https://newpragalbhyapublicschool.in/sitemap.xml

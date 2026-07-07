@@ -1,0 +1,1 @@
+import{Da as n,Ra as o,Sa as r,db as a}from"./chunk-WQ5Z3DW2.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-career"]],decls:2,vars:0,template:function(e,i){e&1&&(o(0,"p"),a(1,"career works!"),r())},encapsulation:2})};export{p as CareerComponent};
